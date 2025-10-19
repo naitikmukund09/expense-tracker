@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="emi.css">
+</head>
+<body>
+    <div class="dark-mode-toggle">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="container">
+        <h1>Loan Calculator</h1>
+        <div class="calculator">
+            <div class="input-group">
+                <label for="amount">Loan Amount (Rs)</label>
+                <input type="number" id="amount" name="amount" min="0" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="rate">Interest Rate (%)</label>
+                <input type="number" id="rate" name="rate" min="0" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="years">Loan Term (Years)</label>
+                <input type="number" id="years" name="years" min="1" required>
+            </div>
+            <button id="calculate">Calculate</button>
+        </div>
+        <div class="results">
+            <div id="monthly-payment" class="result-box">Monthly Payment: Rs0.00</div>
+            <div id="total-payment" class="result-box">Total Payment: Rs0.00</div>
+            <div id="total-interest" class="result-box">Total Interest: Rs0.00</div>
+        </div>
+        <div id="chart-container">
+            <canvas id="paymentChart"></canvas>
+        </div>
+    </div>
+    <script src="emi.js"></script>
+</body>
+</html>

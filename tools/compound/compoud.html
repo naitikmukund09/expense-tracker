@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="compound.css">
+</head>
+<body>
+
+<div class="calculator-container">
+    <h1>Compound Interest Calculator</h1>
+
+    <!-- Total Combined Investment -->
+    <h3>Total Combined Investment: ₹<span id="total-combined-investment">0</span></h3>
+
+    <!-- Lumpsum and SIP Calculator -->
+    <div class="button-container">
+        <button id="lumpsum-btn" class="calc-btn active" onclick="showLumpsumCalculator()">Lumpsum</button>
+        <button id="sip-btn" class="calc-btn" onclick="showSipCalculator()">SIP</button>
+    </div>
+
+    <!-- Lumpsum Calculator -->
+    <div id="lumpsum-form" class="calc-form">
+        <label for="lumpsum-principal">Principal Amount (INR):</label>
+        <input type="number" id="lumpsum-principal" placeholder="Enter principal amount" />
+
+        <label for="lumpsum-rate">Rate of Interest (%):</label>
+        <input type="number" id="lumpsum-rate" placeholder="Enter annual interest rate" />
+
+        <label for="lumpsum-time">Time Period (in years):</label>
+        <input type="number" id="lumpsum-time" placeholder="Enter time in years" />
+
+        <label for="lumpsum-compounding">Compounding Frequency:</label>
+        <select id="lumpsum-compounding">
+            <option value="monthly">Monthly</option>
+            <option value="annually">Annually</option>
+        </select>
+
+        <button onclick="calculateLumpsum()">Calculate Lumpsum</button>
+
+        <h2>Final Amount: ₹<span id="lumpsum-result">0</span></h2>
+        <h3>Total Investment: ₹<span id="lumpsum-total-investment">0</span></h3>
+    </div>
+
+    <!-- SIP Calculator -->
+    <div id="sip-form" class="calc-form" style="display: none;">
+        <label for="sip-principal">Monthly SIP (INR):</label>
+        <input type="number" id="sip-principal" placeholder="Enter SIP amount" />
+
+        <label for="sip-rate">Rate of Interest (%):</label>
+        <input type="number" id="sip-rate" placeholder="Enter annual interest rate" />
+
+        <label for="sip-time">Time Period (in years):</label>
+        <input type="number" id="sip-time" placeholder="Enter time in years" />
+
+        <label for="sip-compounding">Compounding Frequency:</label>
+        <select id="sip-compounding">
+            <option value="monthly">Monthly</option>
+            <option value="annually">Annually</option>
+        </select>
+
+        <button onclick="calculateSIP()">Calculate SIP</button>
+
+        <h2>Final Amount: ₹<span id="sip-result">0</span></h2>
+        <h3>Total Investment: ₹<span id="sip-total-investment">0</span></h3>
+    </div>
+</div>
+
+<script src="compound.js"></script>
+</body>
+</html>

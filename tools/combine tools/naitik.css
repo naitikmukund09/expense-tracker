@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+  align-items: flex-start;
+    height: 50vh;
+    margin: 10;
+    gap: 20px;
+}
+button{
+    background-color: rgba(93, 82, 82, 0.58);
+    width: 140px;
+    display: flex;
+    justify-content: space-around;
+    font: bold;
+
+}
+button a{
+  color: #000;
+  font-size: larger;
+  
+}
